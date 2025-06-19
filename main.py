@@ -22,5 +22,5 @@ user: User = User({
 # users = user_service.findAll()
 # print(users)
 
-rows = DBCONNECTOR.fetch("SELECT * FROM user")
+rows = DBCONNECTOR.fetch("SELECT * FROM ticket_request")
 print(rows)
