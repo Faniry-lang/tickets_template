@@ -51,3 +51,16 @@ CREATE TABLE tarif_ticket (
 );
 
 
+
+INSERT INTO ticket_messages (ticket_id, sender_id, sender_role, message, attachment_path)
+VALUES
+(1, 101, 'agent', 'Bonjour, nous avons bien reçu votre demande.', NULL),
+(2, 102, 'client', 'Jai un problème avec ma commande.', 'client1.pdf'),
+(3, 103, 'agent', 'Pouvez-vous nous envoyer une capture décran ?', NULL),
+(1, 102, 'client', 'Voici le document demandé.', 'doc2.png'),
+(4, 104, 'agent', 'Votre ticket a été pris en charge.', NULL),
+(2, 105, 'agent', 'Avez-vous toujours le problème ?', NULL),
+(5, 106, 'client', 'Oui, le problème persiste.', 'capture.jpg'),
+(3, 103, 'agent', 'Nous avons résolu le bug.', NULL),
+(1, 102, 'client', 'Merci pour votre aide !', NULL),
+(6, 107, 'agent', 'Ticket clôturé.', NULL);

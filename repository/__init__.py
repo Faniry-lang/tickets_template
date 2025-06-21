@@ -1,1 +1,1 @@
-from .repositories import TicketRepository, UserRepository
+from .repositories import TicketRepository, UserRepository, TicketMessageRepository

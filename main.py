@@ -1,5 +1,5 @@
-from entity import User
-from service import UserService
+from entity import User, TicketMessage
+from service import UserService, TicketMessageService
 from api import DBCONNECTOR
 
 user: User = User({
@@ -22,5 +22,15 @@ user: User = User({
 # users = user_service.findAll()
 # print(users)
 
-rows = DBCONNECTOR.fetch("SELECT * FROM ticket_request")
-print(rows)
+tm_service = TicketMessageService()
+ticketMessage = TicketMessage({
+    "ticket_id": 1,
+    "sender_id": 1,
+    "sender_role": "Agent",
+    "message": "coucou les amis",
+    "attachment_path": None,
+    "created_at": None
+})
+tm_service.save(ticketMessage)
+tickets_messages = tm_service.findAll()
+print([t.message for t in tickets_messages])
